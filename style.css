@@ -10,10 +10,10 @@ body {
 .calculator-body {
     display: grid;
     background-color: #2d6a4f;
-    grid-template-rows: 120px 80px 80px 80px 80px 80px;
+    grid-template-rows: 100px 80px 80px 80px 80px 80px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 335px;
-    height: 521px;
+    width: 290px;
+    height: 500px;
     border-radius: 15px;
     /* padding: 8px; */
 }
@@ -27,12 +27,25 @@ body {
     margin: 8px 8px 0 8px;
 }
 
-p.display {
+p.expression {
     font-family: "Bebas Neue", serif;
+    position: relative;
+    overflow-x: auto;
+    text-align: right;
+    color: rgba(189, 189, 189, 0.873);
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 18px 0px;
+}
+
+p.result {
+    font-family: "Bebas Neue", serif;
+    overflow-x: auto;
     font-size: 35px;
     position: relative;
-    left: 290px;
-    top: 20px;
+    text-align: right;
+    padding: 0px 15px;
+    margin-top: 15px;
 }
 
 button {
@@ -41,14 +54,19 @@ button {
     color: rgba(255, 255, 255, 0.792);
     font-size: 25px;
     border-radius: 15px;
-    margin: 8px;
+    margin: 6px;
 }
 
-button.operator, .equal, .clear, .delete, .modulo{
+button.operator, .equal, .clear, .delete, .plus-minus{
     background-color: #081c15;
 }
 
 button.operator, .decimal {
     font-size: 32px;
+}
+
+button.equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
