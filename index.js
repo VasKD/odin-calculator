@@ -39,4 +39,4 @@ function main() {
     console.log(operate(num1, operator, num2));
 }
 
-main();
+// main();
