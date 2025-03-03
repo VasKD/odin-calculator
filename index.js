@@ -38,6 +38,23 @@ const buttons = document.querySelectorAll("button");
 let values = [];
 
 
+function handleInput(input) {
+    input = input.split(/(\d+\.\d+|\d+|\D)/).filter(num => num !== "");
+    console.log(input);
+
+    let num1 = Number(input[0]);
+    let operator = input[1];
+    let num2 = Number(input[2]);
+
+    let result = operate(num1, operator, num2);
+    display[0].textContent = result;
+
+    expression[0].textContent = `${num1} ${operator} ${num2} =`;
+    expression[0].style.color = "grey";
+
+    return result;
+}
+
 buttons.forEach(button => {
     button.addEventListener("click", function() {
         const value = button.getAttribute('data-value');
@@ -53,26 +70,13 @@ buttons.forEach(button => {
             console.log("hey, it's time to clear this expression");
             display[0].textContent = "0";
             expression[0].style.color = "#081c15";
+        } else if (value === "delete") {
+            values.pop();
+            display[0].textContent = values.join("");
         } else {
             values.push(value);
             display[0].textContent = values.join("");
         }
         console.log(values);
-        
     });
 });
-
-function handleInput(input) {
-    input = input.split(/(\d+)/).filter(num => num !== "");
-    console.log(input);
-
-    let num1 = Number(input[0]);
-    let operator = input[1];
-    let num2 = Number(input[2]);
-
-    let result = operate(num1, operator, num2);
-    display[0].textContent = result;
-    expression[0].textContent = `${num1} ${operator} ${num2} =`;
-    expression[0].style.color = "grey";
-    return result;
-}

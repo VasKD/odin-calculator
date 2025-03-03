@@ -63,6 +63,10 @@ button.operator, .equal, .clear, .delete, .plus-minus{
     background-color: #081c15;
 }
 
+button.delete svg {
+    scale: 1.2;
+}
+
 button.operator, .decimal {
     font-size: 32px;
 }
