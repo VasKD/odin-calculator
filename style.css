@@ -11,11 +11,12 @@ body {
 
 .calculator-body {
     display: grid;
+    overflow: auto;
     background-color: #1b595a;
     grid-template-rows: 100px 80px 80px 80px 80px 80px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(60px, 1fr));
     width: 290px;
-    height: 500px;
+    height: auto;
     border-radius: 15px;
     box-shadow: 3px 2px 2px rgba(29, 62, 48, 0.664);
 }
@@ -52,6 +53,8 @@ p.result {
 
 button {
     font-family: "Bebas Neue", serif;
+    flex: 1 1 auto;
+   
     background-color: #8dbb92;
     color: #dce1de;
     font-size: 25px;
