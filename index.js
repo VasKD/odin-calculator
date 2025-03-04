@@ -34,7 +34,7 @@ function operate(num1, operator, num2) {
 // Variables
 let display = document.getElementsByClassName("result");
 let expression = document.getElementsByClassName("expression");
-const buttons = document.querySelectorAll("button");
+let buttons = document.querySelectorAll("button");
 let values = [];
 let operand = "";
 let negateNum = 0;

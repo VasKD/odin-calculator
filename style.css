@@ -6,23 +6,23 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #1b4332;
+    background-color: #dce1de;
 }
 
 .calculator-body {
     display: grid;
-    background-color: #2d6a4f;
+    background-color: #1b595a;
     grid-template-rows: 100px 80px 80px 80px 80px 80px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 290px;
     height: 500px;
     border-radius: 15px;
-    /* padding: 8px; */
+    box-shadow: 3px 2px 2px rgba(29, 62, 48, 0.664);
 }
 
 .calculator-screen {
-    background-color: #081c15;
-    color: rgba(255, 255, 255, 0.792);
+    background-color: #151515;
+    color: rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 5;
     border-radius: 15px;
@@ -34,7 +34,7 @@ p.expression {
     position: relative;
     overflow-x: auto;
     text-align: right;
-    color: #081c15;
+    color: #151515;
     font-size: 20px;
     margin: 0;
     padding: 5px 18px 0px;
@@ -52,15 +52,16 @@ p.result {
 
 button {
     font-family: "Bebas Neue", serif;
-    background-color: #60a582;
-    color: rgba(255, 255, 255, 0.792);
+    background-color: #8dbb92;
+    color: #dce1de;
     font-size: 25px;
     border-radius: 15px;
     margin: 6px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.397);
 }
 
 button.operator, .equal, .clear, .delete, .plus-minus{
-    background-color: #081c15;
+    background-color: #1f2421;
 }
 
 button.delete svg {
@@ -74,5 +75,10 @@ button.operator, .decimal {
 button.equal {
     grid-column-start: 3;
     grid-column-end: 5;
+}
+
+button:active {
+    background-color: #1f2421;
+    color: #dce1de;
 }
 
