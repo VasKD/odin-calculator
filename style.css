@@ -15,7 +15,7 @@ body {
     background-color: #1b595a;
     grid-template-rows: 100px 80px 80px 80px 80px 80px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 290px;
+    width: 310px;
     height: 500px;
     border-radius: 15px;
     box-shadow: 3px 2px 2px rgba(29, 62, 48, 0.664);
