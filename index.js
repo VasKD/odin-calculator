@@ -41,6 +41,7 @@ let negateNum = 0;
 let negated = false;
 
 
+// evaluate the expression and display the result
 function handleInput(input, negated = null) {
     if (negated) {
         input = input.split(/(-?\d+\.\d+|-?\d+|\D)/).filter(num => num !== "");
@@ -71,6 +72,8 @@ function displayExpression(expr) {
     expression[0].style.color = "grey";
 }
 
+
+
 // event listeners
 buttons.forEach(button => {
     button.addEventListener("click", function() {
@@ -91,9 +94,27 @@ buttons.forEach(button => {
         } else {
             handleNumberButton(value);
         }
-        console.log(values);
-        console.log(negated);
     });
+});
+
+document.addEventListener("keydown", function(event) {
+    const key = event.key;
+    console.log(key);
+    if (["+", "-", "*", "/"].includes(key)) {
+        operand = key;
+        console.log(operand);
+    }
+    if (key === "n") {
+        handleNegateButton();
+    } else if (key === "Enter") {
+        handleEnterButton();
+    } else if (key === "c") {
+        handleClearButton();
+    } else if (key === "Backspace") {
+        handleDeleteButton();
+    } else {
+        handleNumberButton(key);
+    }
 });
 
 
@@ -146,8 +167,6 @@ function handleEnterButton() {
         result = handleInput(expr);
         values.push(result);
     }
-
-    // console.log(result);
     values = [];
     values.push(result);
 }
@@ -155,14 +174,14 @@ function handleEnterButton() {
 function handleClearButton() {
     console.log("hey, it's time to clear this expression");
     values = [];
-    displayContent("0");
+    displayResult("0");
     expression[0].style.color = "#081c15";
 }
 
 function handleDeleteButton() {
     console.log("hey, it's time to delete this expression");
     values.pop();
-    displayContent(values.join(""));
+    displayResult(values.join(""));
 }
 
 function handleNumberButton(value) {
