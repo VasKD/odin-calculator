@@ -15,10 +15,8 @@ body {
     background-color: #1b595a;
     grid-template-rows: 100px repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    width: 80vw;
-    max-width: 390px;
-    height: 80vh;
-    max-height: 600px;
+    min-width: 310px;
+    height: 510px;
     border-radius: 15px;
     box-shadow: 3px 2px 2px rgba(29, 62, 48, 0.664);
 }
