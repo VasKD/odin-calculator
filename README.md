@@ -16,7 +16,7 @@ Numbers in an expression can be negated using the +/- symbol and the expression 
 Results are rounded to two decimal places.
 
 # Keyboard Shortcuts ⌨️
-This program allows the user to utilize both the buttons on screena and their keyboard. Numbers, operands, and a decimal point may be typed using the corresponding keys on the keyboard.
+This program allows users to utilize both the buttons on screen and their keyboard. Numbers, operands, and a decimal point may be typed using the corresponding keys on the keyboard.
 ## Clear 🫧
 Clear any expression by using the "c" key.
 ## Negate ➖
