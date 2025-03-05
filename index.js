@@ -43,11 +43,23 @@ let negated = false;
 
 // evaluate the expression and display the result
 function handleInput(input, negated = null) {
+    console.log(input);
     if (negated) {
+        console.log("negated is true");
         input = input.split(/(-?\d+\.\d+|-?\d+|\D)/).filter(num => num !== "");
+        // Handle cases where the first number is negative
+        if (Number(input[0]) < 0 && Number(input[1]) < 0) {
+            console.log("first number is negative");
+            let split = input[1].split("");
+            input.pop();
+            input.push(split[0]);
+            input.push(split[1]);
+        }
     } else {
         input = input.split(/(\d+\.\d+|\d+|\D)/).filter(num => num !== "");
     }
+
+    console.log(input);
 
     let num1 = Number(input[0]);
     let operator = input[1];
@@ -96,6 +108,8 @@ buttons.forEach(button => {
         }
     });
 });
+
+
 
 document.addEventListener("keydown", function(event) {
     const key = event.key;
@@ -169,6 +183,9 @@ function handleEnterButton() {
     }
     values = [];
     values.push(result);
+    if (result < 0) {
+        negated = true;
+    }
 }
 
 function handleClearButton() {
