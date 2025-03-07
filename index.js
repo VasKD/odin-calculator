@@ -202,6 +202,15 @@ function handleDeleteButton() {
 }
 
 function handleNumberButton(value) {
-    values.push(value);
-    displayResult(values.join(""));
+    const operands = ["+", "-", "*", "/"];
+    if (isNaN(value)){
+        if (operands.includes(value)){
+            values.push(value);
+        displayResult(values.join(""));
+        }
+    } else {
+        values.push(value);
+        displayResult(values.join(""));
+    }
+    
 }
