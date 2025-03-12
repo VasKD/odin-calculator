@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
     background-color: #1b595a;
     grid-template-rows: 100px repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, min(80px));
     min-width: 310px;
     height: 510px;
     border-radius: 15px;
