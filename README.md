@@ -24,3 +24,6 @@ Negate a number once it has been typed by pressing the "n" key.
 ## Delete 🔙
 Delete one character at a time by pressing the "backspace" key.
 
+
+![image](https://github.com/user-attachments/assets/2d01b091-1669-4122-8b02-2107abdc48ec)
+
