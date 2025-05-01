@@ -1,6 +1,6 @@
 # Odin Calculator 🧮
 
-A fully functional calculator built using HTML, CSS, and JavaScript. It is responsice and is able to preform basic arithmetic operations.
+A fully functional calculator built using HTML, CSS, and JavaScript. It is responsive and is able to performs basic arithmetic operations.
 
 # Live Preview ▶️
 You can look and interact with the calculator by pressing the link below.
